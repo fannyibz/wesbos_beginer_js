@@ -9,12 +9,22 @@ people.forEach((person, index) => {
 });
 
 // Console Methods
+people.forEach((person, index) => {
+  console.groupCollapsed(person.name);
+  console.log(person.country);
+  console.log(person.cool);
+  console.log('Done!');
+  console.groupEnd(person.name);
+});
 
 // Callstack
 
 // Grabbing Elements
+// $0
+// $0.value
 
 // Breakpoints
+// debugger;
 
 // Scope
 
@@ -39,7 +49,7 @@ function go() {
 }
 
 const button = document.querySelector('.bigger');
-button.addEventListener('click', function(e) {
+button.addEventListener('click', function (e) {
   const newFontSize =
     parseFloat(getComputedStyle(e.currentTarget).fontSize) + 1;
   e.currentTarget.style.fontSize = `${newFontSize}px`;
